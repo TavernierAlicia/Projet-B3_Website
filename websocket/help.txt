@@ -1,0 +1,8 @@
+Compile with your os : go build main.go subject_selector.go sendmail.go 
+Compile with windows : GOOS=windows GOARCH=amd64 go build main.go subject_selector.go sendmail.go 
+Compile with macOs : GOOS=darwin GOARCH=amd64 go build main.go subject_selector.go sendmail.go
+Compile with linux : GOOS=linux GOARCH=amd64 go build main.go subject_selector.go sendmail.go
+
+Launch without compile : go run main.go subject_selector.go sendmail.go 
+
+Get packages : go get "package_name"
