@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -18,17 +19,6 @@ type Preview struct {
 	Text       string
 	ErrorCause string
 }
-
-/*
-type Mail struct {
-	From      string
-	Name      string
-	Surname   string
-	Subject   string
-	CmdNumber string
-	Message   string
-}
-*/
 
 //handle index page
 func indexPage(c *gin.Context) {
@@ -74,53 +64,55 @@ func aboutPage(c *gin.Context) {
 
 func receptForm(c *gin.Context) {
 
-	//Call to ParseForm makes form fields available.
-	//err := c.Request.ParseForm()
 	data := Preview{}
-	//if err != nil {
-	//	fmt.Println("there is an error")
-	//	c.HTML(404, "404.html", data)
-	//}
 
-	fmt.Println("parsing form")
-	c.Request.ParseForm()
-	from := c.Request.PostForm["from"]
-	name := c.Request.PostForm["name"]
-	surname := c.Request.PostForm["surname"]
-	subject := c.Request.PostForm["subject"]
-	cmdNumber := c.Request.PostForm["cmdNumber"]
-	message := c.Request.PostForm["message"]
-
-	//mail := Mail{
-	//	From:      from,
-	//	Name:      name,
-	//	Surname:   surname,
-	//	Subject:   subject,
-	//	CmdNumber: cmdNumber,
-	//	Message:   message,
-	//}
-
-	fmt.Println("Hello", name, surname, from, subject, cmdNumber, message)
-	fmt.Println("redirect")
 	fmt.Println(data)
-	c.Redirect(http.StatusMovedPermanently, "/success")
-	fmt.Println("redirected")
+	c.Request.ParseForm()
+
+	mail := strings.Join(c.Request.PostForm["from"], " ")
+	name := strings.Join(c.Request.PostForm["name"], " ")
+	surname := strings.Join(c.Request.PostForm["surname"], " ")
+	subjectNum := strings.Join(c.Request.PostForm["subject"], " ")
+	cmdNumber := strings.Join(c.Request.PostForm["cmdNumber"], " ")
+	message := strings.Join(c.Request.PostForm["message"], " ")
+	pro := false
+
+	path := c.FullPath()
+
+	//Define is the client is a professionnal or not
+	if path == "/contact/form-pro" || path == "/professionnal/form-pro" || path == "/form-pro" {
+		pro = true
+	} else {
+		pro = false
+	}
+
+	//choose subject and send mail
+	subject := SelectSubj(pro, subjectNum)
+	response := SendMail(mail, name, surname, subject, cmdNumber, message, pro)
+
+	if response == true {
+		c.Redirect(http.StatusMovedPermanently, "/success")
+	} else {
+		c.Redirect(http.StatusMovedPermanently, "/error")
+	}
 }
 
 //handle success page
 func successForm(c *gin.Context) {
 	data := Preview{}
 	c.HTML(200, "success.html", data)
+
+	//TODO: find a solution for after sendmail
+	//time.Sleep(2 * time.Second)
+	//c.Redirect(http.StatusMovedPermanently, "/index")
 }
 
 //handle custom error page
 func errorPage(c *gin.Context) {
 	var cause string
 	//get infos about the path
-	path1 := c.Param("path1")
-	path2 := c.Param("path2")
 	host := "127.0.0.1"
-	fullpath := host + c.FullPath() + path1 + "/" + path2
+	fullpath := host + c.FullPath()
 
 	cause = "une erreur s'est produite"
 
@@ -156,7 +148,7 @@ func main() {
 	//GET requests
 	//index routes
 	router.NoRoute(errorPage)
-
+	router.GET("/error", errorPage)
 	router.GET("/", indexPage)
 	router.GET("/index", indexPage)
 	router.GET("/success", successForm)
