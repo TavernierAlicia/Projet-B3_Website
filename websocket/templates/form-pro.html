@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Click'N Drink - Contact</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="../js/nav.js"></script>
+  <!-- 
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+    -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>Formulaire de contact - chef d'établissement</h1>
+    <p>Afin de favoriser votre prise en charge, dans le cas d'un litige concernant un client, veuillez renseigner les informations suivantes:
+      <li>entrez l'addresse mail utilisée par votre compte Click'N Drink (nous utiliserons cette addresse mail afin de vous répondre)</li>
+      <li>le nom et prénom du client (si possible son identifiant)</li>
+      <li>le numéro de la commande en question</li>
+    </p>
+    <div class="row">
+      <div class="col-10">
+        <form method="POST" name="sendmail" action="">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" name="from" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Nom</label>
+            <div class="col-sm-10">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nom">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="surname" class="col-sm-2 col-form-label">Prénom</label>
+            <div class="col-sm-10">
+              <input type="text" name="surname" class="form-control" id="surname" placeholder="Prénom">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inlineFormCustomSelectPref" class="col-sm-2 col-form-label">Sujet</label>
+            <div class="col-sm-10">
+              <select class="custom-select" name="subject" id="inlineFormCustomSelectPref">
+                <option value="1">Je souhaite en savoir plus concernant le service</option>
+                <option value="2">J'aimerais prendre rendez-vous avec l'équipe Click'N Drink</option>
+                <option value="3">Je souhaite m'inscrire au service</option>
+                <option value="4">J'ai trouvé un bug!</option>
+                <option value="5">J'ai rencontré un problème avec une commande</option>
+                <option value="6">Je souhaite fermer mon compte</option>
+                <option value="7">Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="command" class="col-sm-2 col-form-label">Numéro de la commande (facultatif)</label>
+              <div class="col-sm-10">
+                <input type="text" name="cmdNumber" class="form-control" id="command" placeholder="N° Commande">
+              </div>
+            </div>
+          <div class="form-group row">
+            <label for="message" class="col-sm-2 col-form-label">Message</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <script src="../js/footer.js"></script>
+</footer>
+
+</html>
