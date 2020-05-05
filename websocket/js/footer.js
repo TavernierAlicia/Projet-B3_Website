@@ -5,26 +5,51 @@ function createFooter() {
     <head>
       <meta charset="utf-8">
       <title>Order'N Drink - Accueil</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
     </body>
     <footer>
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <a href="/about">À propos</a>
-            </div>
-            <div class="col">
-              <a href="/contact"> Contact </a>
-            </div>
-            <div class="col">
-              <a href="/about"> Mentions légales </a>
-            </div>
+      <div class="container">
+        <div class="footer-left">
+          <div class="footer-line">
+            <a href="/about">À propos</a>
+          </div>
+          <div class="footer-line">
+            <a href="/form"> Contact </a>
+          </div>
+          <div class="footer-line">
+            <a href="/professionnal"> Devenir partenaire </a>
+          </div>
+          <div class="footer-line">
+            <a href="/legal"> Mentions légales </a>
           </div>
         </div>
-        <p style="text-align: center;">Order'N Drink - Copyright 2019</p>
+
+        <div class="footer-middle">
+          <div class="footer-line">
+            <p>Une question?</p>
+            <p>service.orderndrink@gmail.com</p>
+          </div>
+          <div class="footer-line">
+            <p> 01 76 09 34 08 </p>
+          </div>
+          <div class="footer-line">
+            <a href="#"><img class=social src="../pictures/fb.png"></a>
+            <a href="#"><img class=social src="../pictures/insta.png"></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-line">
+            <a class="footer-store" href="#"><img class="white-store" src="../pictures/app-store-blanc.png"></a>
+          </div>
+          <div class="footer-line">
+            <a class="footer-store" href="#"><img class="white-store" src="../pictures/google-play-blanc.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="cp">
+        <p>Order'N Drink - Copyright 2019</p>
       </div>
     </footer>
   </html>

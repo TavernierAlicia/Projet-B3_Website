@@ -6,7 +6,7 @@ import (
 )
 
 //sendmail
-func SendMail(mail string, name string, surname string, subject string, cmdNumber string, message string, pro bool) bool {
+func SendMail(mail string, name string, surname string, subject string, message string, pro bool, tel string, entname string) bool {
 
 	to := ""
 
@@ -22,7 +22,7 @@ func SendMail(mail string, name string, surname string, subject string, cmdNumbe
 	pass := "OrderNDrink2020"
 
 	//set message
-	message = name + " " + surname + "\n" + mail + "\n" + "Objet: " + subject + "\n" + "N commande: " + cmdNumber + "\n" + "Message: " + message
+	message = name + " " + surname + "\n" + mail + "\n" + "Tel: " + tel + "\n" + "Entreprise: " + entname + "\n \n \n" + "Objet: " + subject + " \n" + "Message: \n" + message
 
 	msg := "From: " + mail + "\n" +
 		"To: " + to + "\n" +
