@@ -10,6 +10,7 @@ function createFooter() {
     </body>
     <footer>
       <div class="container">
+      	<div class="wrapper">
         <div class="footer-left">
           <div class="footer-line">
             <a href="/about">À propos</a>
@@ -47,6 +48,7 @@ function createFooter() {
             <a class="footer-store" href="#"><img class="white-store" src="../pictures/google-play-blanc.png"></a>
           </div>
         </div>
+      </div>
       </div>
       <div class="cp">
         <p>Order'N Drink - Copyright 2019</p>
