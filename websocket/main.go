@@ -84,10 +84,6 @@ func receptForm(c *gin.Context) {
 //handle success page
 func successForm(c *gin.Context) {
 	c.HTML(200, "success.html", nil)
-
-	//TODO: find a solution for after sendmail
-	//time.Sleep(2 * time.Second)
-	//c.Redirect(http.StatusMovedPermanently, "/index")
 }
 
 //handle custom error 404
