@@ -4,6 +4,7 @@ function createNav() {
     <html lang="fr">
       <head>
         <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../pictures/favicon.png" />
         <title>Order'N Drink - Accueil</title>
       </head>
       <body>
