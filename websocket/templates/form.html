@@ -6,6 +6,7 @@
   <title>Order'N Drink - Contact</title>
   <script src="../js/nav.js"></script>
   <script src="../js/form-control.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <!-- 
       <link rel="stylesheet" href="style.css">
       <script src="script.js"></script>
@@ -77,9 +78,18 @@
             <label for="reglement">Je concent a partager ces informations avec l'equipe Order'n Drink</label>
               <input type="checkbox" id="reglement" name="reglement" onclick="checkAll()">
           </div>
-          <!-- on enable check here -->
+          <script>
+            function onSubmit(token) {
+              document.getElementById("form").submit();
+            }
+          </script>
+
+
           <div class="button">
-              <input type="submit" id="sendform" class="btn btn-primary" value="Envoyer" onclick="checkAll">
+            <!-- Recaptcha version
+            <input type="submit" id="sendform" class="btn btn-primary g-recaptcha" data-sitekey="6Lc6WfsUAAAAAE0YLlqR5OOUEcsOv4rQMN8Y66wp" 
+            data-callback='onSubmit' value="Envoyer" onclick="checkAll"> -->
+            <input type="submit" id="sendform" class="btn btn-primary" value="Envoyer" onclick="checkAll">
           </div>
       </form>
     </div>
