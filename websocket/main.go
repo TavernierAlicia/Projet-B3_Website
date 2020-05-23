@@ -72,9 +72,10 @@ func receptForm(c *gin.Context) {
 
 	//choose subject and send mail
 	subject := SelectSubj(subjectNum)
-	response := SendMail(mail, name, surname, subject, message, pro, tel, entname)
+	successReq := insertDb(mail, name, surname, subject, message, pro, tel, entname)
+	successMail := SendMail(mail, name, surname, subject, message, pro, tel, entname)
 
-	if response == true {
+	if successMail == nil && successReq == nil {
 		c.Redirect(http.StatusMovedPermanently, "/success")
 	} else {
 		c.Redirect(http.StatusMovedPermanently, "/error")

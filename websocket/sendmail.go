@@ -6,7 +6,7 @@ import (
 )
 
 //sendmail
-func SendMail(mail string, name string, surname string, subject string, message string, pro bool, tel string, entname string) bool {
+func SendMail(mail string, name string, surname string, subject string, message string, pro bool, tel string, entname string) (err error) {
 
 	to := ""
 
@@ -29,16 +29,15 @@ func SendMail(mail string, name string, surname string, subject string, message 
 		"Subject: " + subject + "\n\n" +
 		message
 
-	err := smtp.SendMail("smtp.gmail.com:587",
+	err = smtp.SendMail("smtp.gmail.com:587",
 		smtp.PlainAuth("", from, pass, "smtp.gmail.com"),
 		from, []string{to}, []byte(msg))
 
 	if err != nil {
 		fmt.Println("smtp error: %s", err)
 		fmt.Println("failed")
-		return false
 	} else {
 		fmt.Println("passed")
-		return true
 	}
+	return err
 }
