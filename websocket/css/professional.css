@@ -65,6 +65,10 @@ ul.pro-list li p {
 	background-color: #fff;
 }
 
+#formula .offers-col.inactive {
+	background-color: #E8E8E8;
+}
+
 #formula .offers-col::before {
 	content: attr(label);
 	position: absolute;
@@ -118,6 +122,10 @@ ul.pro-list li p {
 	text-align: center;
 }
 
+#formula .offers-col.inactive h3,
+#formula .offers-col.inactive h4,
+#formula .offers-col.inactive p.price-precision{ color: #CECECE; }
+
 #formula ul.bundle {
 	list-style-type: none;
 }
@@ -130,12 +138,15 @@ ul.pro-list li p {
 	padding-left: 40px;
 	position: relative;
 }
+#formula .offers-col.inactive ul.bundle li { color: rgba(0, 0, 0, 0.3); }
 
 #formula ul.bundle li::before {
 	position: absolute;
 	left: 0;
 	top: 0;
 }
+#formula .offers-col.inactive ul.bundle li::before { filter: grayscale(1); }
+
 #formula ul.bundle li.included::before { content: url('../pictures/included.png'); }
 #formula ul.bundle li.notincluded::before { content: url('../pictures/not-included.png'); }
 #formula ul.bundle li.notincluded { color: rgba(0,0, 0, 0.3); }
@@ -148,4 +159,10 @@ ul.pro-list li p {
 	font-family: 'Encode Sans', sans-serif;
 	font-weight: bold;
 	color: #000;
+}
+#formula .offers-col.inactive p.tryme { color: rgba(0, 0, 0, 0.3); }
+#formula .offers-col.inactive a.offer-btn {
+	background-color: #D2D2D2;
+	border-color: #D2D2D2;
+	pointer-events: none;
 }
