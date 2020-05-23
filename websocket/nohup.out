@@ -1,0 +1,107 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /pictures/*filepath       --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /pictures/*filepath       --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /error                    --> main.errorForm (3 handlers)
+[GIN-debug] GET    /                         --> main.indexPage (3 handlers)
+[GIN-debug] GET    /index                    --> main.indexPage (3 handlers)
+[GIN-debug] GET    /success                  --> main.successForm (3 handlers)
+[GIN-debug] GET    /about                    --> main.aboutPage (3 handlers)
+[GIN-debug] GET    /professionnal            --> main.proPage (3 handlers)
+[GIN-debug] GET    /professionnal/form       --> main.form (3 handlers)
+[GIN-debug] GET    /about/faq                --> main.faq (3 handlers)
+[GIN-debug] GET    /about/legal              --> main.legal (3 handlers)
+[GIN-debug] GET    /form                     --> main.form (3 handlers)
+[GIN-debug] GET    /faq                      --> main.faq (3 handlers)
+[GIN-debug] GET    /FAQ                      --> main.faq (3 handlers)
+[GIN-debug] GET    /legal                    --> main.legal (3 handlers)
+[GIN-debug] POST   /form                     --> main.receptForm (3 handlers)
+[GIN-debug] POST   /professionnal/form       --> main.receptForm (3 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:3000
+[GIN] 2020/05/22 - 13:42:34 | 200 |     547.648µs |   80.13.224.208 | GET      /professionnal
+[GIN] 2020/05/22 - 13:42:36 | 200 |     384.676µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:35 | 200 |     406.107µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:36 | 200 |     404.597µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:37 | 200 |     471.123µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:41 | 200 |     380.305µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:42 | 200 |     455.329µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:42 | 200 |     416.973µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:43 | 200 |     451.898µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:43 | 200 |     457.261µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:44 | 200 |      458.16µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:44 | 200 |     399.747µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:45 | 200 |     444.523µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:52 | 200 |     452.533µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:52 | 200 |     430.733µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:53 | 200 |     936.225µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:53 | 200 |     378.703µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:53 | 200 |     337.306µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:54 | 200 |     356.773µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:54 | 200 |     378.348µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:55 | 200 |     372.714µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:55 | 200 |     403.553µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:43:55 | 200 |     389.911µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:44:06 | 200 |     374.019µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:44:06 | 200 |     320.929µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:44:06 | 200 |     392.899µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:44:10 | 200 |      353.18µs |   80.13.224.208 | GET      /index
+[GIN] 2020/05/22 - 13:44:11 | 200 |     329.259µs |   80.13.224.208 | GET      /index
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /app/show/                --> main.showBars (3 handlers)
+[GIN-debug] GET    /app/search/              --> main.searchName (3 handlers)
+[GIN-debug] GET    /app/favs/                --> main.showFavs (3 handlers)
+[GIN-debug] GET    /app/profile/             --> main.getUserProfile (3 handlers)
+[GIN-debug] GET    /app/show/:id             --> main.getEtabContent (3 handlers)
+[GIN-debug] GET    /app/getOrder/:commandid  --> main.getOrder (3 handlers)
+[GIN-debug] GET    /app/showOrders           --> main.getOrders (3 handlers)
+[GIN-debug] POST   /app/createUser/          --> main.createUser (3 handlers)
+[GIN-debug] POST   /app/auth/                --> main.auth (3 handlers)
+[GIN-debug] POST   /app/favs/add/:etabid     --> main.addingFavs (3 handlers)
+[GIN-debug] POST   /app/takeOrder            --> main.takeOrder (3 handlers)
+[GIN-debug] PUT    /app/profile/edit/        --> main.editUser (3 handlers)
+[GIN-debug] DELETE /app/favs/delete/:etabid  --> main.deletingFavs (3 handlers)
+[GIN-debug] Listening and serving HTTP on :9999
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /pictures/*filepath       --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /pictures/*filepath       --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /error                    --> main.errorForm (3 handlers)
+[GIN-debug] GET    /                         --> main.indexPage (3 handlers)
+[GIN-debug] GET    /index                    --> main.indexPage (3 handlers)
+[GIN-debug] GET    /success                  --> main.successForm (3 handlers)
+[GIN-debug] GET    /about                    --> main.aboutPage (3 handlers)
+[GIN-debug] GET    /professionnal            --> main.proPage (3 handlers)
+[GIN-debug] GET    /professionnal/form       --> main.form (3 handlers)
+[GIN-debug] GET    /about/faq                --> main.faq (3 handlers)
+[GIN-debug] GET    /about/legal              --> main.legal (3 handlers)
+[GIN-debug] GET    /form                     --> main.form (3 handlers)
+[GIN-debug] GET    /faq                      --> main.faq (3 handlers)
+[GIN-debug] GET    /FAQ                      --> main.faq (3 handlers)
+[GIN-debug] GET    /legal                    --> main.legal (3 handlers)
+[GIN-debug] POST   /form                     --> main.receptForm (3 handlers)
+[GIN-debug] POST   /professionnal/form       --> main.receptForm (3 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:3000
+[GIN] 2020/05/22 - 14:19:56 | 200 |    4.135819ms |   80.13.224.208 | GET      /
+[GIN] 2020/05/22 - 14:20:02 | 404 |     5.83092ms |   80.13.224.208 | GET      "/"
+[GIN] 2020/05/22 - 14:20:02 | 404 |      24.672µs |   80.13.224.208 | GET      "/favicon.ico"
