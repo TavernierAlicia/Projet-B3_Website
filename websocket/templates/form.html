@@ -19,7 +19,7 @@
     <h1>Formulaire de contact</h1>
 
     <div class="form">
-        <form method="POST" name="sendmail" action="">
+        <form method="POST" name="sendmail" action="" id="form">
 
           <div class="ispro-group">
             <label for="part">Particulier</label>
@@ -78,6 +78,9 @@
             <label for="reglement">Je concent a partager ces informations avec l'equipe Order'n Drink</label>
               <input type="checkbox" id="reglement" name="reglement" onclick="checkAll()">
           </div>
+
+
+          
           <script>
             function onSubmit(token) {
               document.getElementById("form").submit();
@@ -85,13 +88,13 @@
           </script>
 
 
-          <div class="button">
-            <!-- Recaptcha version
-            <input type="submit" id="sendform" class="btn btn-primary g-recaptcha" data-sitekey="6Lc6WfsUAAAAAE0YLlqR5OOUEcsOv4rQMN8Y66wp" 
-            data-callback='onSubmit' value="Envoyer" onclick="checkAll"> -->
-            <input type="submit" id="sendform" class="btn btn-primary" value="Envoyer" onclick="checkAll">
-          </div>
       </form>
+      <div class="button">
+      <!-- Recaptcha input -->
+            <input type="submit" id="sendform" class="btn btn-primary g-recaptcha" data-sitekey="6Lc6WfsUAAAAAE0YLlqR5OOUEcsOv4rQMN8Y66wp" 
+            data-callback='onSubmit' data-action="submit" value="Envoyer" onclick="checkAll"> 
+        <!-- <input type="submit" id="sendform" class="btn btn-primary" value="Envoyer" onclick="checkAll">-->
+      </div>
     </div>
   </div>
 </body>
