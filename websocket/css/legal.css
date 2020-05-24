@@ -1,11 +1,5 @@
-nav {
-	background-color: #f2865e;
-}
-
-body {
-	padding-top: 200px;
-}
-
+nav { background-color: #ED561B; }
+body { padding-top: 200px; }
 p {
 	font-family: 'Montserrat';
 	font-size: 30px;

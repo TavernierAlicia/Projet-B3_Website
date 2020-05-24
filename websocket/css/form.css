@@ -1,0 +1,107 @@
+body { padding-top: 200px; }
+h1 {
+	font-size: 48px;
+	color: #fff;
+	text-transform: none;
+	text-shadow: 0 3px 6px #000000cc;
+}
+
+form {
+	background-color: #fff;
+	border-radius: 27px;
+	box-shadow: 0 6px 10px #00000029;
+	padding: 68px calc(12.5% - 25px) 10%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	justify-content: space-between;
+	--label-min: 16;
+	--label-max: 25;
+	--label-calc: calc(var(--label-min) * 1px + (var(--label-max) - var(--label-min)) * ((100vw - 480px) / (1440 - 480)));
+	--label-size: clamp(var(--label-min) * 1px, var(--label-calc), var(--label-max) * 1px);
+
+	--placeholder-min: 14;
+	--placeholder-max: 20;
+	--placeholder-calc: calc(var(--placeholder-min) * 1px + (var(--placeholder-max) - var(--placeholder-min)) * ((100vw - 480px) / (1440 - 480)));
+	--placeholder-size: clamp(var(--placeholder-min) * 1px, var(--placeholder-calc), var(--placeholder-max) * 1px);
+}
+
+form > div {
+	flex: 0 0 100%;
+	padding: 0 25px;
+	box-sizing: border-box;
+}
+
+form > div.name-group,
+form > div.surname-group {
+	flex: 1 1 300px;
+}
+
+div.ispro-group {
+	margin-bottom: calc(var(--placeholder-size) * 1.5);
+	display: flex;
+	flex-flow: row wrap;
+}
+
+label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: var(--label-size);
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000;
+	text-transform: uppercase;
+	vertical-align: middle;
+	margin-right: calc(var(--placeholder-size) * 3);
+	margin-bottom: var(--placeholder-size);
+	display: block;
+}
+
+select,
+textarea,
+input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	box-sizing: border-box;
+}
+textarea::placeholder,
+input::placeholder {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: var(--placeholder-size);
+	line-height: 3;
+	color: #b3b3b3;
+}
+input[type="radio"] {
+	background-color: #ededed;
+	border: 2px solid #707070;
+	box-sizing: border-box;
+	width: calc(var(--placeholder-size) * 2);
+	height: calc(var(--placeholder-size) * 2);
+	margin: 0 15px 0 0;
+	vertical-align: middle;
+	border-radius: 50%;
+	position: relative;
+}
+input[type="radio"][checked]::before {
+	content: '';
+	width: 75%;	
+	height: 75%;
+	position: absolute;
+	left: 12.5%;
+	top: 12.5%;
+	border-radius: 50%;
+	background-color: #707070;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="email"] {
+	height: calc(var(--placeholder-size) * 3);
+	background-color: #ededed;
+	margin-bottom: calc(var(--placeholder-size) * 2.5);
+	border-radius: 9px;
+	border: none;
+	padding: 0 30px;
+	display: block;
+}

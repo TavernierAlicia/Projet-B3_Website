@@ -89,7 +89,7 @@ header {
 	position: relative;
 }
 
-header img.bg {
+img.bg {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -167,28 +167,33 @@ footer {
 	color: #fff;
 }
 
-footer .footer-line { margin-bottom: 30px; }
+footer .footer-line:not(:last-child) { margin-bottom: 25px; }
 
 footer a, footer p {
 	display: inline-block;
 	text-transform: uppercase;
+	margin-bottom: 0;
 }
 
 footer p:nth-child(2) {
 	text-transform: initial;
 	font-weight: 400;
+	margin-bottom: 0;
 }
 
 footer .container {
-	padding: 45px 0;
+	padding: 60px 0 35px;
 }
 
 footer .wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1.2fr 0.8fr 1fr;
 }
 
 footer .footer-middle a { margin-right: 3rem; }
+footer .footer-middle a,
+footer .footer-right { justify-self: end; }
+footer .footer-right .footer-line { margin-bottom: 0; }
 footer .footer-middle a,
 footer .footer-right a {
 	filter: drop-shadow(4px 4px 2px #00000000);
