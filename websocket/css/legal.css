@@ -1,14 +1,20 @@
+:root {
+	--p18-min: 12;
+	--p18-max: 18;
+	--p18-calc: calc(var(--p18-min) * 1px + (var(--p18-max) - var(--p18-min)) * ((100vw - 480px) / (1440 - 480)));
+	--p18-size: clamp(var(--p18-min) * 1px, var(--p18-calc), var(--p18-max) * 1px);
+}
+
 nav { background-color: #ED561B; }
-body { padding-top: 200px; }
 p {
 	font-family: 'Montserrat';
-	font-size: 30px;
+	font-size: var(--button-size);
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 40px;
+	margin-bottom: calc(var(--button-size) * 1.33);
 }
 p.date {
-	font-size: 18px;
+	font-size: var(--p18-size);
 	font-style: italic;
 	margin-bottom: 10px;
 	color: #555;
@@ -22,7 +28,7 @@ p.legal-title {
 
 ul.faq-list {
 	list-style-type: none;
-	padding-inline-start: 0;
+	padding: 0 2.5vw 0 50px;
 }
 
 ul.faq-list li p.question::before {

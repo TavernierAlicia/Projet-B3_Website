@@ -1,7 +1,14 @@
+:root {
+	--p20-min: 12;
+	--p20-max: 20;
+	--p20-calc: calc(var(--p20-min) * 1px + (var(--p20-max) - var(--p20-min)) * ((100vw - 480px) / (1440 - 480)));
+	--p20-size: clamp(var(--p20-min) * 1px, var(--p20-calc), var(--p20-max) * 1px);
+}
+
 header::before {
 	content: '';
 	width: 100vw;
-	height: 290px;
+	height: 40%;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -11,13 +18,21 @@ header::before {
 
 header .left-side {
 	width: 50%;
-	min-width: 400px;
-	margin: 40px 0;
+	min-width: 280px;
+	margin: 2vw 0;
+}
+header .left-side .store a.store-link {
+	width: 49%;
+	display: inline-block;
+}
+header .left-side .store a.store-link img {
+	width: 100%;
 }
 
 header #ond-header > img {
 	width: 45%;
-	object-fit: contain;
+	-o-object-fit: contain;
+	   object-fit: contain;
 	position: absolute;
 	bottom: -50px;
 	left: 50%;
@@ -25,8 +40,8 @@ header #ond-header > img {
 
 ul.pro-list { list-style-type: none; }
 ul.pro-list li {
-	margin-bottom: 40px;
-	padding-left: 80px;
+	margin-bottom: 2vw;
+	padding-left: calc(var(--button-size) * 2);
 	position: relative;
 }
 ul.pro-list li img {
@@ -34,35 +49,51 @@ ul.pro-list li img {
 	 left: 0;
 	 top: -10px;
 	 display: block;
-	 width: 56px;
-	 height: 56px;
+	 width: calc(var(--button-size) * 2 - 4px);
+	 height: calc(var(--button-size) * 2 - 4px);
  }
 ul.pro-list li p {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 30px;
+	font-size: var(--button-size);
 	line-height: 1.23;
 }
 
 #formula .wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
-	align-items: stretch;
-	justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	-ms-flex-pack: distribute;
+	    justify-content: center;
 }
 
 #formula h2 {
-	flex: 0 0 100%;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 100%;
+	        flex: 0 0 100%;
 }
 
 #formula .offers-col {
-	flex: 0 0 34%;
-	box-sizing: border-box;
-	min-width: 300px;
+	-webkit-box-flex: 0;
+	    -ms-flex: 1 0 50%;
+	        flex: 1 0 50%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	min-width: 280px;
+	max-width: 550px;
 	padding: 2% 3% 4%;
-	border-radius: 70px;
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+	border-radius: 3.5vw;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+	        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 	position: relative;
 	background-color: #fff;
+	margin: 5vw 2.5vw;
 }
 
 #formula .offers-col.inactive {
@@ -74,19 +105,25 @@ ul.pro-list li p {
 	position: absolute;
 	left: -7.5%;
 	top: 60px;
-	transform-origin: bottom left;
-	transform: rotate(-20deg);
+	-webkit-transform-origin: bottom left;
+	    -ms-transform-origin: bottom left;
+	        transform-origin: bottom left;
+	-webkit-transform: rotate(-20deg);
+	    -ms-transform: rotate(-20deg);
+	        transform: rotate(-20deg);
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
 	background-color: #ED561B;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+	font-size: var(--p20-size);
 	font-weight: bold;
 	padding: 10px;
 	width: 50%;
-	box-sizing: border-box;
-	clip-path: polygon(6% 0, 100% 0px, 94% 100%, 0px 100%);
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-clip-path: polygon(6% 0, 100% 0px, 94% 100%, 0px 100%);
+	        clip-path: polygon(6% 0, 100% 0px, 94% 100%, 0px 100%);
 }
 
 #formula .offers-col::after {
@@ -96,8 +133,12 @@ ul.pro-list li p {
 	top: 60px;
 	z-index: -1;
 	background-color: #A3310D;
-	transform-origin: bottom left;
-	transform: rotate(25deg);
+	-webkit-transform-origin: bottom left;
+	    -ms-transform-origin: bottom left;
+	        transform-origin: bottom left;
+	-webkit-transform: rotate(25deg);
+	    -ms-transform: rotate(25deg);
+	        transform: rotate(25deg);
 	height: 44px;
 	width: 50%;
 }
@@ -110,12 +151,12 @@ ul.pro-list li p {
 	text-align: center;
 	font-weight: bold;
 }
-#formula h3 { font-size: 60px; }
-#formula h4 { font-size: 48px; }
+#formula h3 { font-size: var(--h1h2-size); }
+#formula h4 { font-size: var(--header-size); }
 
 #formula p.price-precision {
 	line-height: 1.2;
-	font-size: 20px;
+	font-size: var(--p20-size);
 	font-family: 'Encode Sans', sans-serif;
 	font-weight: 300;
 	color: #000;
@@ -132,9 +173,9 @@ ul.pro-list li p {
 
 #formula ul.bundle li {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
+	font-size: var(--navtxt-size);
 	line-height: 1.3;
-	margin: 25px 0;
+	margin: var(--navtxt-size) 0;
 	padding-left: 40px;
 	position: relative;
 }
@@ -145,17 +186,17 @@ ul.pro-list li p {
 	left: 0;
 	top: 0;
 }
-#formula .offers-col.inactive ul.bundle li::before { filter: grayscale(1); }
+#formula .offers-col.inactive ul.bundle li::before { -webkit-filter: grayscale(1); filter: grayscale(1); }
 
 #formula ul.bundle li.included::before { content: url('../pictures/included.png'); }
 #formula ul.bundle li.notincluded::before { content: url('../pictures/not-included.png'); }
 #formula ul.bundle li.notincluded { color: rgba(0,0, 0, 0.3); }
 
 #formula p.tryme {
-	margin: 50px 0 20px;
+	margin: calc(var(--p20-size) * 2.5) 0 var(--p20-size);
 	text-align: center;
 	line-height: 1.2;
-	font-size: 20px;
+	font-size: var(--p20-size);
 	font-family: 'Encode Sans', sans-serif;
 	font-weight: bold;
 	color: #000;
