@@ -1,8 +1,8 @@
 :root {
 	--reasons-min: 20;
 	--reasons-max: 30;
-	--reasons-calc: calc(var(--reasons-min) * 1px + (var(--reasons-max) - var(--reasons-min)) * ((100vw - 480px) / (1440 - 480)));
-	--reasons-size: clamp(var(--reasons-min) * 1px, var(--reasons-calc), var(--reasons-max) * 1px);
+	--reasons-calc: calc(var(--reasons-min) * 0.1rem + (var(--reasons-max) - var(--reasons-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--reasons-size: clamp(var(--reasons-min) * 0.1rem, var(--reasons-calc), var(--reasons-max) * 0.1rem);
 }
 
 header::before {
@@ -18,7 +18,7 @@ header::before {
 
 header .left-side {
 	width: 50%;
-	min-width: 280px;
+	min-width: 28rem;
 	margin: 7.5vw 0;
 }
 
@@ -35,7 +35,7 @@ header #ond-header > img {
 	-o-object-fit: contain;
 	   object-fit: contain;
 	position: absolute;
-	bottom: -50px;
+	bottom: -5rem;
 	left: 50%;
 }
 
@@ -60,10 +60,10 @@ ul.reasons {
 
 ul.reasons li {
 	-webkit-box-flex: 0;
-	    -ms-flex: 0 1 calc(33.33% - 70px);
-	        flex: 0 1 calc(33.33% - 70px);
-	min-width: 280px;
-	margin: 0 calc(var(--reasons-size) + 5px) 5vw;
+	    -ms-flex: 0 1 calc(33.33% - 7rem);
+	        flex: 0 1 calc(33.33% - 7rem);
+	min-width: 28rem;
+	margin: 0 calc(var(--reasons-size) + 0.5rem) 5vw;
 	text-align: center;
 }
 
