@@ -207,3 +207,9 @@ ul.pro-list li p {
 	border-color: #D2D2D2;
 	pointer-events: none;
 }
+@media (max-width: 768px) {
+	header .left-side {
+		width: 100%;
+		text-align: center;
+	}
+}
