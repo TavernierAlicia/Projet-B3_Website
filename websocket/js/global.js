@@ -11,3 +11,7 @@ document.addEventListener('scroll', () => {
 		}
 	}, 250)
 })
+
+document.getElementById('menuButton').addEventListener('click', () => {
+	document.body.classList.toggle('menuOpen');
+})

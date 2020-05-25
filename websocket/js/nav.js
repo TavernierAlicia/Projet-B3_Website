@@ -11,6 +11,7 @@ function createNav() {
         <nav>
           <a class="index" href="/index"><img src="../pictures/logo.png"></a>
           <div class="navbar-right-items">
+	    <button id="menuButton">Menu</button>
             <ul>
               <li class="nav-item">
                 <a class="nav-link" href="/professionnal">Devenir partenaire</a>
