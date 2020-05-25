@@ -3,7 +3,8 @@ package main
 import (
 	"net/http"
 	"strings"
-
+	_"os"
+	_"io"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
@@ -110,6 +111,13 @@ func errorForm(c *gin.Context) {
 }
 
 func main() {
+
+	//HISTORY LOGS FILE
+	//logFile, err := os.Create("production.log")
+	//if err != nil {
+	//	panic(err)
+	//}
+	//gin.DefaultWriter = io.MultiWriter(logFile, os.Stdout)
 
 	//zap stuff
 	log, _ = zap.NewProduction()
