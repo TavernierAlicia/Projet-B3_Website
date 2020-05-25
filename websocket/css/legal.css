@@ -1,8 +1,8 @@
 :root {
 	--p18-min: 12;
 	--p18-max: 18;
-	--p18-calc: calc(var(--p18-min) * 1px + (var(--p18-max) - var(--p18-min)) * ((100vw - 480px) / (1440 - 480)));
-	--p18-size: clamp(var(--p18-min) * 1px, var(--p18-calc), var(--p18-max) * 1px);
+	--p18-calc: calc(var(--p18-min) * 0.1rem + (var(--p18-max) - var(--p18-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--p18-size: clamp(var(--p18-min) * 0.1rem, var(--p18-calc), var(--p18-max) * 0.1rem);
 }
 
 nav { background-color: #ED561B; }
@@ -16,7 +16,7 @@ p {
 p.date {
 	font-size: var(--p18-size);
 	font-style: italic;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 	color: #555;
 }
 p.question { position: relative; }
@@ -28,12 +28,19 @@ p.legal-title {
 
 ul.faq-list {
 	list-style-type: none;
-	padding: 0 2.5vw 0 50px;
+	padding: 0 2.5vw 0 5rem;
 }
 
 ul.faq-list li p.question::before {
-	content: url('../pictures/question.png');
+	content: '';
+	background-image: url('../pictures/question.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
 	position: absolute;
-	right: calc(100% + 15px);
-	top: 0;
+	right: calc(100% + 1.5rem);
+	bottom: 0;
 }

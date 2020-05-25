@@ -1,12 +1,22 @@
 :root {
 	--legal-min: 12;
 	--legal-max: 18;
-	--legal-calc: calc(var(--legal-min) * 1px + (var(--legal-max) - var(--legal-min)) * ((100vw - 480px) / (1440 - 480)));
-	--legal-size: clamp(var(--legal-min) * 1px, var(--legal-calc), var(--legal-max) * 1px);
+	--legal-calc: calc(var(--legal-min) * 0.1rem + (var(--legal-max) - var(--legal-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--legal-size: clamp(var(--legal-min) * 0.1rem, var(--legal-calc), var(--legal-max) * 0.1rem);
+
+	--label-min: 16;
+	--label-max: 25;
+	--label-calc: calc(var(--label-min) * 0.1rem + (var(--label-max) - var(--label-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--label-size: clamp(var(--label-min) * 0.1rem, var(--label-calc), var(--label-max) * 0.1rem);
+
+	--placeholder-min: 14;
+	--placeholder-max: 20;
+	--placeholder-calc: calc(var(--placeholder-min) * 0.1rem + (var(--placeholder-max) - var(--placeholder-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--placeholder-size: clamp(var(--placeholder-min) * 0.1rem, var(--placeholder-calc), var(--placeholder-max) * 0.1rem);
 }
 
 h1 {
-	font-size: 48px;
+	font-size: var(--header-size);
 	color: #fff;
 	text-transform: none;
 	text-shadow: 0 3px 6px #000000cc;
@@ -14,10 +24,10 @@ h1 {
 
 form {
 	background-color: #fff;
-	border-radius: 27px;
+	border-radius: 2.7rem;
 	-webkit-box-shadow: 0 6px 10px #00000029;
 	        box-shadow: 0 6px 10px #00000029;
-	padding: 68px calc(12.5% - 25px) 10%;
+	padding: 68px calc(12.5% - 2.5rem) 10%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -31,22 +41,13 @@ form {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	--label-min: 16;
-	--label-max: 25;
-	--label-calc: calc(var(--label-min) * 1px + (var(--label-max) - var(--label-min)) * ((100vw - 480px) / (1440 - 480)));
-	--label-size: clamp(var(--label-min) * 1px, var(--label-calc), var(--label-max) * 1px);
-
-	--placeholder-min: 14;
-	--placeholder-max: 20;
-	--placeholder-calc: calc(var(--placeholder-min) * 1px + (var(--placeholder-max) - var(--placeholder-min)) * ((100vw - 480px) / (1440 - 480)));
-	--placeholder-size: clamp(var(--placeholder-min) * 1px, var(--placeholder-calc), var(--placeholder-max) * 1px);
 }
 
 form > div {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 100%;
 	        flex: 0 0 100%;
-	padding: 0 25px;
+	padding: 0 2.5rem;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	position: relative;
@@ -54,7 +55,7 @@ form > div {
 
 form > div > p {
 	position: absolute;
-	right: 25px;
+	right: 2.5rem;
 	top: 0;
 	color: #f00;
 	font-family: 'Montserrat', sans-serif;
@@ -66,8 +67,8 @@ form > div > p {
 form > div.name-group,
 form > div.surname-group {
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 1 300px;
-	        flex: 1 1 300px;
+	    -ms-flex: 1 1 30rem;
+	        flex: 1 1 30rem;
 }
 
 div.ispro-group {
@@ -98,15 +99,15 @@ div.reglement-check label {
 	font-size: var(--legal-size);
 	font-weight: 400;
 	text-transform: none;
-	padding-left: 25px;
+	padding-left: 2.5rem;
 }
 
 div.reglement-check input {
-	width: 20px;
-	height: 20px;
-	border-radius: 4px;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.4rem;
 	position: absolute;
-	left: 25px;
+	left: 2.5rem;
 	top: 0;
 	background-color: #ededed;
 	border: 2px solid #707070;
@@ -126,7 +127,7 @@ div.reglement-check input:checked::before {
 
 select {
 	background-image: url('https://cdn.iconscout.com/icon/free/png-512/down-arrow-1767499-1502567.png');
-	background-position: center right 15px;
+	background-position: center right 1.5rem;
 	background-size: auto 50%;
 	background-repeat: no-repeat;
 }

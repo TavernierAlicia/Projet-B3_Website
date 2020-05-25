@@ -1,8 +1,8 @@
 :root {
 	--p20-min: 12;
 	--p20-max: 20;
-	--p20-calc: calc(var(--p20-min) * 1px + (var(--p20-max) - var(--p20-min)) * ((100vw - 480px) / (1440 - 480)));
-	--p20-size: clamp(var(--p20-min) * 1px, var(--p20-calc), var(--p20-max) * 1px);
+	--p20-calc: calc(var(--p20-min) * 0.1rem + (var(--p20-max) - var(--p20-min)) * ((100vw - 48rem) / (1440 - 480)));
+	--p20-size: clamp(var(--p20-min) * 0.1rem, var(--p20-calc), var(--p20-max) * 0.1rem);
 }
 
 header::before {
@@ -18,7 +18,7 @@ header::before {
 
 header .left-side {
 	width: 50%;
-	min-width: 280px;
+	min-width: 28rem;
 	margin: 2vw 0;
 }
 header .left-side .store a.store-link {
@@ -34,7 +34,7 @@ header #ond-header > img {
 	-o-object-fit: contain;
 	   object-fit: contain;
 	position: absolute;
-	bottom: -50px;
+	bottom: -5rem;
 	left: 50%;
 }
 
@@ -47,10 +47,10 @@ ul.pro-list li {
 ul.pro-list li img {
 	 position: absolute;
 	 left: 0;
-	 top: -10px;
+	 top: -1rem;
 	 display: block;
-	 width: calc(var(--button-size) * 2 - 4px);
-	 height: calc(var(--button-size) * 2 - 4px);
+	 width: calc(var(--button-size) * 2 - 0.4rem);
+	 height: calc(var(--button-size) * 2 - 0.4rem);
  }
 ul.pro-list li p {
 	font-family: 'Montserrat', sans-serif;
@@ -85,12 +85,12 @@ ul.pro-list li p {
 	        flex: 1 0 50%;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
-	min-width: 280px;
-	max-width: 550px;
+	min-width: 28rem;
+	max-width: 55rem;
 	padding: 2% 3% 4%;
 	border-radius: 3.5vw;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-	        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
+	        box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
 	position: relative;
 	background-color: #fff;
 	margin: 5vw 2.5vw;
@@ -104,7 +104,7 @@ ul.pro-list li p {
 	content: attr(label);
 	position: absolute;
 	left: -7.5%;
-	top: 60px;
+	top: 6rem;
 	-webkit-transform-origin: bottom left;
 	    -ms-transform-origin: bottom left;
 	        transform-origin: bottom left;
@@ -118,7 +118,7 @@ ul.pro-list li p {
 	font-family: 'Montserrat', sans-serif;
 	font-size: var(--p20-size);
 	font-weight: bold;
-	padding: 10px;
+	padding: 1rem;
 	width: 50%;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -130,7 +130,7 @@ ul.pro-list li p {
 	content: '';
 	position: absolute;
 	left: -7.5%;
-	top: 60px;
+	top: 6rem;
 	z-index: -1;
 	background-color: #A3310D;
 	-webkit-transform-origin: bottom left;
@@ -139,7 +139,7 @@ ul.pro-list li p {
 	-webkit-transform: rotate(25deg);
 	    -ms-transform: rotate(25deg);
 	        transform: rotate(25deg);
-	height: 44px;
+	height: 4.4rem;
 	width: 50%;
 }
 
@@ -176,7 +176,7 @@ ul.pro-list li p {
 	font-size: var(--navtxt-size);
 	line-height: 1.3;
 	margin: var(--navtxt-size) 0;
-	padding-left: 40px;
+	padding-left: 4rem;
 	position: relative;
 }
 #formula .offers-col.inactive ul.bundle li { color: rgba(0, 0, 0, 0.3); }
