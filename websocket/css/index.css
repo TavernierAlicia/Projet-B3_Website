@@ -1,6 +1,6 @@
 :root {
 	--reasons-min: 20;
-	--reasons-max: 30;
+	--reasons-max: 26;
 	--reasons-calc: calc(var(--reasons-min) * 0.1rem + (var(--reasons-max) - var(--reasons-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--reasons-size: max(var(--reasons-min) * 0.1rem, min(var(--reasons-calc), var(--reasons-max) * 0.1rem));
 }

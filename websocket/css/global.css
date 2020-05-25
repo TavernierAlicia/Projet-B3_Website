@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
-	--h1h2-min: 25;
-	--h1h2-max: 60;
+	--h1h2-min: 20;
+	--h1h2-max: 40;
 	--h1h2-calc: calc(var(--h1h2-min) * 0.1rem + (var(--h1h2-max) - var(--h1h2-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--h1h2-size: max(var(--h1h2-min) * 0.1rem, min(var(--h1h2-calc), var(--h1h2-max) * 0.1rem));
 
@@ -11,13 +11,13 @@
 	--navtxt-calc: calc(var(--navtxt-min) * 0.1rem + (var(--navtxt-max) - var(--navtxt-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--navtxt-size: max(var(--navtxt-min) * 0.1rem, min(var(--navtxt-calc), var(--navtxt-max) * 0.1rem));
 
-	--header-min: 22;
-	--header-max: 48;
+	--header-min: 25;
+	--header-max: 50;
 	--header-calc: calc(var(--header-min) * 0.1rem + (var(--header-max) - var(--header-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--header-size: max(var(--header-min) * 0.1rem, min(var(--header-calc), var(--header-max) * 0.1rem));
 
-	--button-min: 20;
-	--button-max: 30;
+	--button-min: 14;
+	--button-max: 28;
 	--button-calc: calc(var(--button-min) * 0.1rem + (var(--button-max) - var(--button-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--button-size: max(var(--button-min) * 0.1rem, min(var(--button-calc), var(--button-max) * 0.1rem));
 
@@ -166,7 +166,7 @@ nav .navbar-right-items ul li.nav-item a:hover::before {
 }
 
 header {
-	padding-top: 10vw;
+	padding-top: 5vw;
 	position: relative;
 }
 
