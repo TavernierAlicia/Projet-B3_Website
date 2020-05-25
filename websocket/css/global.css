@@ -12,7 +12,7 @@
 	--navtxt-size: max(var(--navtxt-min) * 0.1rem, min(var(--navtxt-calc), var(--navtxt-max) * 0.1rem));
 
 	--header-min: 25;
-	--header-max: 50;
+	--header-max: 40;
 	--header-calc: calc(var(--header-min) * 0.1rem + (var(--header-max) - var(--header-min)) * ((100vw - 48rem) / (1440 - 480)));
 	--header-size: max(var(--header-min) * 0.1rem, min(var(--header-calc), var(--header-max) * 0.1rem));
 
