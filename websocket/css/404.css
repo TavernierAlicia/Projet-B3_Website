@@ -1,0 +1,20 @@
+body {
+	padding-top: 0;
+	background-color: #eee;
+	text-align: center;
+}
+
+h3, a {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: var(--navtxt-size);
+	margin-bottom: var(--navtxt-size);
+}
+
+a {
+	color: #ED561B;
+	text-decoration-thickness: 1px;
+	transform: translateY(0);
+	transition: text-decoration-thickness 0.25s ease, transform 0.25s ease;
+	display: inline-block;
+}
+a:hover { text-decoration-thickness: 5px; transform: translateY(-4px); }
