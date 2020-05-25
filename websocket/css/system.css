@@ -7,7 +7,7 @@ body {
 h3, a {
 	font-family: 'Encode Sans', sans-serif;
 	font-size: var(--navtxt-size);
-	margin-bottom: var(--navtxt-size);
+	margin-bottom: calc(var(--navtxt-size) * 2);
 }
 
 a {
@@ -18,3 +18,8 @@ a {
 	display: inline-block;
 }
 a:hover { text-decoration-thickness: 5px; transform: translateY(-4px); }
+
+img {
+	width: 15%;
+	margin-bottom: calc(var(--navtxt-size) * 2);
+}
