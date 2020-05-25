@@ -4,22 +4,22 @@
 	--h1h2-min: 25;
 	--h1h2-max: 60;
 	--h1h2-calc: calc(var(--h1h2-min) * 0.1rem + (var(--h1h2-max) - var(--h1h2-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--h1h2-size: clamp(var(--h1h2-min) * 0.1rem, var(--h1h2-calc), var(--h1h2-max) * 0.1rem);
+	--h1h2-size: max(var(--h1h2-min) * 0.1rem, min(var(--h1h2-calc), var(--h1h2-max) * 0.1rem));
 
 	--navtxt-min: 18;
 	--navtxt-max: 25;
 	--navtxt-calc: calc(var(--navtxt-min) * 0.1rem + (var(--navtxt-max) - var(--navtxt-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--navtxt-size: clamp(var(--navtxt-min) * 0.1rem, var(--navtxt-calc), var(--navtxt-max) * 0.1rem);
+	--navtxt-size: max(var(--navtxt-min) * 0.1rem, min(var(--navtxt-calc), var(--navtxt-max) * 0.1rem));
 
 	--header-min: 22;
 	--header-max: 48;
 	--header-calc: calc(var(--header-min) * 0.1rem + (var(--header-max) - var(--header-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--header-size: clamp(var(--header-min) * 0.1rem, var(--header-calc), var(--header-max) * 0.1rem);
+	--header-size: max(var(--header-min) * 0.1rem, min(var(--header-calc), var(--header-max) * 0.1rem));
 
 	--button-min: 20;
 	--button-max: 30;
 	--button-calc: calc(var(--button-min) * 0.1rem + (var(--button-max) - var(--button-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--button-size: clamp(var(--button-min) * 0.1rem, var(--button-calc), var(--button-max) * 0.1rem);
+	--button-size: max(var(--button-min) * 0.1rem, min(var(--button-calc), var(--button-max) * 0.1rem));
 
 }
 
@@ -29,7 +29,7 @@ body, h1, h2, h3, h4, div, p, a, ul, li {
 	padding: 0;
 	margin: 0;
 }
-body { padding-top: clamp(10rem, 10vw, 20rem); }
+body { padding-top: max(10rem, min(10vw, 20rem)); }
 
 h1, h2 {
 	font-family: 'Encode Sans', sans-serif;
@@ -173,7 +173,7 @@ header {
 img.bg {
 	position: absolute;
 	left: 0;
-	top: calc(clamp(10rem, 10vw, 20rem) * -1);
+	top: calc(max(10rem, min(10vw, 20rem)) * -1);
 	height: 100%;
 	width: 100%;
 	display: block;
@@ -336,7 +336,7 @@ footer .cp p {
 		        justify-content: flex-start;
 		width: auto; 
 		position: fixed;
-		top: clamp(10rem, 10vw, 20rem);
+		top: max(10rem, min(10vw, 20rem));
 		right: 0;
 		transform: translateX(100%);
 		transition: transform 0.25s ease-in-out;

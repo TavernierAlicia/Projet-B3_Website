@@ -2,7 +2,7 @@
 	--p20-min: 12;
 	--p20-max: 20;
 	--p20-calc: calc(var(--p20-min) * 0.1rem + (var(--p20-max) - var(--p20-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--p20-size: clamp(var(--p20-min) * 0.1rem, var(--p20-calc), var(--p20-max) * 0.1rem);
+	--p20-size: max(var(--p20-min) * 0.1rem, min(var(--p20-calc), var(--p20-max) * 0.1rem));
 }
 
 header::before {

@@ -2,7 +2,7 @@
 	--p18-min: 12;
 	--p18-max: 18;
 	--p18-calc: calc(var(--p18-min) * 0.1rem + (var(--p18-max) - var(--p18-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--p18-size: clamp(var(--p18-min) * 0.1rem, var(--p18-calc), var(--p18-max) * 0.1rem);
+	--p18-size: max(var(--p18-min) * 0.1rem, min(var(--p18-calc), var(--p18-max) * 0.1rem));
 }
 
 nav { background-color: #ED561B; }

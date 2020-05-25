@@ -2,17 +2,17 @@
 	--legal-min: 12;
 	--legal-max: 18;
 	--legal-calc: calc(var(--legal-min) * 0.1rem + (var(--legal-max) - var(--legal-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--legal-size: clamp(var(--legal-min) * 0.1rem, var(--legal-calc), var(--legal-max) * 0.1rem);
+	--legal-size: max(var(--legal-min) * 0.1rem, min(var(--legal-calc), var(--legal-max) * 0.1rem));
 
 	--label-min: 16;
 	--label-max: 25;
 	--label-calc: calc(var(--label-min) * 0.1rem + (var(--label-max) - var(--label-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--label-size: clamp(var(--label-min) * 0.1rem, var(--label-calc), var(--label-max) * 0.1rem);
+	--label-size: max(var(--label-min) * 0.1rem, var(--label-calc), min(var(--label-max) * 0.1rem));
 
 	--placeholder-min: 14;
 	--placeholder-max: 20;
 	--placeholder-calc: calc(var(--placeholder-min) * 0.1rem + (var(--placeholder-max) - var(--placeholder-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--placeholder-size: clamp(var(--placeholder-min) * 0.1rem, var(--placeholder-calc), var(--placeholder-max) * 0.1rem);
+	--placeholder-size: max(var(--placeholder-min) * 0.1rem, min(var(--placeholder-calc), var(--placeholder-max) * 0.1rem));
 }
 
 h1 {

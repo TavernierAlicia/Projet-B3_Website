@@ -2,11 +2,11 @@
 	--b50-min: 20;
 	--b50-max: 50;
 	--b50-calc: calc(var(--b50-min) * 0.1rem + (var(--b50-max) - var(--b50-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--b50-size: clamp(var(--b50-min) * 0.1rem, var(--b50-calc), var(--b50-max) * 0.1rem);
+	--b50-size: max(var(--b50-min) * 0.1rem, min(var(--b50-calc), var(--b50-max) * 0.1rem));
 	--arrow-min: 16;
 	--arrow-max: 40;
 	--arrow-calc: calc(var(--arrow-min) * 0.1rem + (var(--arrow-max) - var(--arrow-min)) * ((100vw - 48rem) / (1440 - 480)));
-	--arrow-size: clamp(var(--arrow-min) * 0.1rem, var(--arrow-calc), var(--arrow-max) * 0.1rem);
+	--arrow-size: max(var(--arrow-min) * 0.1rem, min(var(--arrow-calc), var(--arrow-max) * 0.1rem));
 }
 
 
