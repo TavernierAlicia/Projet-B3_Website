@@ -9,7 +9,7 @@ function createNav() {
       </head>
       <body>
         <nav>
-          <a class="index" href="/index"><img src="../pictures/logo.png"></a>
+          <a class="index" href="/index"><img src="../pictures/logo.png" alt="logo Order'N Drink"></a>
           <div class="navbar-right-items">
 	    <button id="menuButton">Menu</button>
             <ul>
