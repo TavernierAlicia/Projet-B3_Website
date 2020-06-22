@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -10,7 +11,7 @@ import (
 	"go.uber.org/zap"
 )
 
-func RunDb() (*sqlx.DB, string) {
+func RunDb() (db *sqlx.DB, err error) {
 	log, _ = zap.NewProduction()
 
 	defer log.Sync()
@@ -19,7 +20,7 @@ func RunDb() (*sqlx.DB, string) {
 	viper.SetConfigType("json")
 	viper.AddConfigPath(".")
 
-	err := viper.ReadInConfig()
+	err = viper.ReadInConfig()
 	if err != nil {
 		log.Error("Unable to load config file", zap.Int("attempt", 3), zap.Duration("backoff", time.Second))
 	}
@@ -33,21 +34,40 @@ func RunDb() (*sqlx.DB, string) {
 
 	//// DB CONNECTION ////
 	pathSQL := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s", user, pass, host, port, dbname)
-	db, err := sqlx.Connect("mysql", pathSQL)
+	db, err = sqlx.Connect("mysql", pathSQL)
+
 	if err != nil {
 		log.Error("failed to connect database", zap.String("database", dbname),
 			zap.Int("attempt", 3), zap.Duration("backoff", time.Second))
-		return db, dbname
+		return db, err
 
 	} else {
 		log.Info("Connexion etablished ", zap.String("database", dbname),
 			zap.Int("attempt", 3), zap.Duration("backoff", time.Second))
 	}
-	return db, dbname
+	return db, err
 }
 
 func insertDb(mail string, name string, surname string, subject string, message string, pro bool, tel string, entname string) (err error) {
-	db, _ := RunDb()
+
+	db, err := RunDb()
+
+	attempt := 1
+	for attempt <= 3 && err != nil {
+		//printerr
+		log.Error("failed to connect database", zap.String("database", "orderndrink"),
+			zap.Int("attempt", attempt), zap.Duration("backoff", time.Second))
+
+		//restart mysql
+		exec.Command("sudo", "service", "mysqld", "restart").Output()
+
+		//wait
+		time.Sleep(4 * time.Second)
+
+		//retry
+		db, err = RunDb()
+		attempt++
+	}
 
 	if pro == true {
 		_, err = db.Exec("INSERT INTO promessages(mail, name, surname, subject, message, tel, entname) VALUES(?, ?, ?, ?, ?, ?, ?)", mail, name, surname, subject, message, tel, entname)
