@@ -37,8 +37,6 @@ func RunDb() (db *sqlx.DB, err error) {
 	db, err = sqlx.Connect("mysql", pathSQL)
 
 	if err != nil {
-		log.Error("failed to connect database", zap.String("database", dbname),
-			zap.Int("attempt", 3), zap.Duration("backoff", time.Second))
 		return db, err
 
 	} else {
