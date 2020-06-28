@@ -45,7 +45,7 @@ function createFooter() {
             <a class="footer-store" href="#"><img class="white-store" src="../pictures/app-store-blanc.png" alt="logo de l'app store d'apple"></a>
           </div>
           <div class="footer-line">
-            <a class="footer-store" href="#"><img class="white-store" src="../pictures/google-play-blanc.png" alt="logo du google play store"></a>
+            <a class="footer-store" href="http://cdn.orderndrink.com/app/app-release.apk"><img class="white-store" src="../pictures/google-play-blanc.png" alt="logo du google play store"></a>
           </div>
         </div>
       </div>
